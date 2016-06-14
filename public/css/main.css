@@ -1,0 +1,250 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(90deg, rgba(128,128,128,1) 0%, rgba(66,66,66,1) 100%);
+  font-family: 'Oswald', sans-serif;
+  height: 100%;
+}
+
+* {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#backround-video {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#frame {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 15%;
+}
+
+#scoreboard {
+  position: absolute;
+  right: 0;
+  left: 80%;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 50;
+}
+
+#scores {
+  list-style-type: none;
+  color: rgba(255,255,255,0.4);
+  height: 95%;
+  overflow: hidden;
+}
+
+#scores li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+#scores li .hits {
+  font-size: 2.4em;
+  display: inline-block;
+  position: relative;
+  top: 0.2em;
+  width: 54px;
+}
+
+#inner {
+  padding: 5% 10% 0 10%;
+}
+
+#options {
+  margin: 0;
+  padding: 0 0 2em 1em;
+}
+
+#buttons {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 30px;
+  width: 80%;
+  left: 10%;
+}
+
+#buttons > li {
+  list-style-type: none;
+}
+
+#options > li {
+  display: block;
+  list-style-type: georgian;
+  font-size: 2.2em;
+  text-shadow: 1px 1px 1px rgba(255,255,255, 0.2);
+}
+
+#buttons li {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 22%;
+  margin-right: 3%;
+  position:relative;
+  cursor: pointer;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.8);
+}
+
+.message {
+    height: 100%;
+    text-align: center;
+    padding-top: 60px;
+    font-size: 2em;
+}
+
+.message .right {
+  color: #00BB00;
+  text-shadow: 0px 0px 25px rgb(68, 255, 68);
+}
+
+
+.message .wrong {
+  color: #BB0000;
+  text-shadow: 0px 0px 25px rgba(219, 45, 32, 0.44);
+}
+
+
+.hide {
+  display: none;
+}
+
+
+.button {
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   padding: 2em 0;
+  text-align: center;
+   -webkit-border-radius: 40px;
+   -moz-border-radius: 40px;
+   border-radius: 40px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 24px;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+
+#header {
+  text-align: center;
+}
+
+#header li {
+  display: inline-block;
+  font-size: 1.3em;
+  color: #ababab;
+  text-shadow: 0px 0px 1px rgba(0,0,0,1);
+}
+
+#header li .sep {
+  display: inline-block;
+  padding: 0 10px;
+  opacity: 0.5;
+}
+
+#right-answers {
+    font-size: 2em !important;
+    color: #4a8c4a !important;
+    text-shadow: 0px 0px 1px rgba(0,0,0,1);
+}
+
+#question {
+  border: 1px solid #3a3a3a;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+  padding: 1em;
+  text-align: center;
+
+  background: rgba(0,0,0,0.1);
+  border-radius: 100em;
+  box-shadow: 0px 0px 2px rgba(255,255,255,0.3);
+  color: #fff;
+}
+
+#question.wrong {
+  background: rgba(255, 0, 0, 0.2);
+}
+
+
+#question.right {
+  background: rgba(0, 255, 0, 0.2);
+}
+.blocker {
+  z-index: 999 !important;
+  background-color: rgba(0,0,0,0.8) !important;
+}
+
+.the-end {
+  transform: scale(1.8);
+  transition: all 3s ease-in-out;
+}
+
+#new-player-modal-link {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  display: inline-block;
+  text-indent: -999px;
+  width: 3em;
+  height: 3em;
+  background: rgba(255,255,255,0.2);
+  z-index: 9999;
+}
+
+button#create-player {
+    width: 100%;
+    font-size: 2em;
+    margin-top: 14px;
+    border-radius: 9px;
+    background: #333;
+    color: #fff;
+    font-weight: normal;
+}
+
+input#player-name {
+    width: 100%;
+    font-size: 4em;
+}

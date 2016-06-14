@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="bower_components/jquery-modal/jquery.modal.css">
+<script src="bower_components/underscore/underscore-min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery-modal/jquery.modal.min.js"></script>
+<script src="js/questions.js"></script>
+<script src="js/helpers.js"></script>
+<script src="bower_components/lockr/lockr.js">
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Trivia</title>
+</head>
+<body>
+  <video id="backround-video" autoplay="autoplay">
+    <source src="" type="video/mp4">
+ </video>
+ <div id="scoreboard">
+   <ul id="scores">
+
+   </ul>
+ </div>
+  <div id="frame">
+    <div id="inner">
+    <audio controls id="background-audio" style="display:none;">
+      <source src="" type="audio/ogg">
+   </audio>
+    <audio controls id="answers" style="display:none;">
+      <source src="" type="audio/ogg">
+   </audio>
+   <div id="new-player" class="modal" style="display: none;">
+     <input id="player-name" type="text"/>
+     <button id="create-player">Start!</button>
+   </div>
+
+    <div id="top">
+      <a href="#new-player" id="new-player-modal-link" rel="modal:open">New</a>
+      <ul id="header">
+        <li id="name"><span class="text"></span><span class="sep">|</span></li>
+        <li id="right-answers">Right (<span class="number">0</span>)<span class="sep">|</span></li>
+        <li id="wrong-answers">Wrong (<span class="number">0</span>)<span class="sep">|</span></li>
+        <li id="countdown">00:00</li>
+      </ul>
+      <h2 id="question">..question..</h2>
+    </div>
+
+    <ul id="options"></ul>
+    <ul id="buttons"></ul>
+    <div class="overlay  hide">
+      <div class="message ">
+      </div>
+    </div>
+  </div>
+  </div>
+<script src="js/main.js"></script>
+</body>
+</html>
