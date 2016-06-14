@@ -16,7 +16,7 @@
   <title>Trivia</title>
 </head>
 <body>
-  <video id="backround-video" autoplay="autoplay">
+  <video preload=auto id="backround-video" autoplay="autoplay">
     <source src="" type="video/mp4">
  </video>
  <div id="scoreboard">
@@ -26,9 +26,9 @@
  </div>
   <div id="frame">
     <div id="inner">
-    <audio controls id="background-audio" style="display:none;">
+    <audio controls id="background-audio" preload=auto style="display:none;">
       <source src="" type="audio/ogg">
-   </audio>
+   </audio preload=auto>
     <audio controls id="answers" style="display:none;">
       <source src="" type="audio/ogg">
    </audio>
